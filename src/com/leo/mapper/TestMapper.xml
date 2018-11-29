@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leo.mapper.TestMapper">
+	
+	<insert id="add" parameterType="TestVo" useGeneratedKeys="true" keyProperty="testId">
+		insert into tb_test(text)
+		values(#{text})
+	</insert>
+	
+	<select id="search" parameterType="TestVo" resultType="TestVo">
+		select * from tb_test where text like CONCAT(CONCAT('%',#{text}),'%')
+	</select>
+	
+	<delete id="del" parameterType="int">
+		delete from tb_test
+		where testId = #{value}
+	</delete>
+	
+	<select id="get" parameterType="int" resultType="TestVo">
+		select * from tb_test where testId = #{value}
+	</select>
+	
+	<update id="update" parameterType="TestVo">
+		update tb_test
+		set text = #{text}
+		where testId = #{testId}
+	</update>
+	
+	
+</mapper>

@@ -1,0 +1,31 @@
+.leo-skin-blue .navbar{
+	background:#3c8dbc;
+	border:none;
+	border-radius:0px;
+	margin-bottom:0px;
+}
+
+.leo-skin-blue .navbar .navbar-brand{
+	color:#fff;
+}
+
+.leo-skin-blue .navbar .navbar-nav a{
+	color:#fff;
+}
+
+.leo-skin-blue .navbar .navbar-nav a:hover{
+	color:#eee;
+	background:#337aa3;
+}
+
+.leo-skin-blue .content-wrapper{
+	width:100%;
+	/*
+	position:absolute;
+	left:0px;
+	top:50px;
+	bottom:0px;
+	z-index:-1000;
+	*/
+	background:url(../images/login_bg.jpg) no-repeat center bottom;
+}
